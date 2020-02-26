@@ -20,4 +20,5 @@ main {
 
 .main-content-container {
   min-height: 700px;
+  padding: 5px;
 }
