@@ -1,3 +1,5 @@
 import React from 'react';
 
-export const About = () => <div>About</div>;
+import styles from './about.module.scss';
+
+export const About = () => <div className={styles.about}>About</div>;

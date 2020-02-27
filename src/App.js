@@ -8,10 +8,15 @@ import { Footer } from './components/footer/footer';
 import { PageNotFound } from './components/page-not-found/page-not-found';
 
 const App = () => {
+
+  const handleSearchClick = () => {
+    console.log('trigger search');
+  }
+
   return (
     <main>
       <Router>
-        <Header />
+        <Header handleSearchClick={handleSearchClick} />
         <div className="main-content-container">
           <Switch>
             <Route exact path="/">
