@@ -12,6 +12,7 @@ export const Header = ({handleSearchClick}) => (
                 <Nav className="mr-auto">
                     <Nav.Link as={Link} to="/home">Home</Nav.Link>
                     <Nav.Link as={Link} to="/about">About</Nav.Link>
+                    <Nav.Link as={Link} to="/cities">Cities</Nav.Link>
                 </Nav>
                 <Form inline>
                     <FormControl type="text" placeholder="Search" className="mr-sm-2" />
