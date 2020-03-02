@@ -8,5 +8,20 @@
         "id": "2",
         "name": "Wrocław",
         "country": "Poland"
+    },
+    {
+        "id": "3",
+        "name": "Sydney",
+        "country": "Australia"
+    },
+    {
+        "id": "4",
+        "name": "Sydney",
+        "country": "Australia"
+    },
+    {
+        "id": "5",
+        "name": "Los Angeles",
+        "country": "United States"
     }
 ]

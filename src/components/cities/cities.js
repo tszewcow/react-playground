@@ -22,6 +22,11 @@ export class Cities extends Component {
         });
     }
 
+    onDetailsClick = (event) => {
+        const cityId = event.target.getAttribute('city');
+        console.log(this.state.cities.find(city => city.id === cityId));
+    }
+
     render() {
         const citiesTable = (
             <Table striped bordered hover>
@@ -39,7 +44,10 @@ export class Cities extends Component {
                             <td>{index + 1}</td>
                             <td>{city.name}</td>
                             <td>{city.country}</td>
-                            <td><Button variant="primary" size="sm">Details</Button></td>
+                            <td className={styles.actions}>
+                                <Button variant="primary" size="sm" onClick={this.onDetailsClick} city={city.id}>Details</Button>
+                                <Button variant="danger" size="sm">Delete</Button>
+                            </td>
                         </tr>
                     ))}
                 </tbody>

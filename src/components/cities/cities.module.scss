@@ -3,3 +3,12 @@
         height: 20rem;
         border-width: 2rem;
 }
+
+.actions {
+    display: flex;
+    justify-content: space-around;
+
+    button + button {
+        margin-left: 0.1rem;
+    }
+}
