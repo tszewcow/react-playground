@@ -6,7 +6,7 @@ import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
 export const Header = ({handleSearchClick}) => (
     <header>
         <Navbar bg="light" expand="lg">
-            <Navbar.Brand as={Link} to="/home">Sample app</Navbar.Brand>
+            <Navbar.Brand as={Link} to="/home">World Travel Guide</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
