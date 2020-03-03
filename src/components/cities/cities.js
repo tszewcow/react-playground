@@ -27,7 +27,10 @@ export class Cities extends Component {
 
     onDeleteClick = (event) => {
         const cityId = event.target.getAttribute('city');
-        console.log(this.state.cities.find(city => city.id === cityId));
+        const index = this.state.cities.findIndex(city => city.id === cityId);
+        this.setState(prev => ({
+            cities: prev.cities.slice(0, index).concat(prev.cities.slice(index + 1))
+        }))
     }
 
     render() {

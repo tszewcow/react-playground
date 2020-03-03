@@ -22,7 +22,7 @@ export const CitiesTable = ({ cities, onDetailsClick, onDeleteClick }) => (
                     <td>{city.country}</td>
                     <td className={styles.actions}>
                         <Button variant="primary" size="sm" onClick={onDetailsClick} city={city.id}>Details</Button>
-                        <Button variant="danger" size="sm" onClick={onDeleteClick}>Delete</Button>
+                        <Button variant="danger" size="sm" onClick={onDeleteClick} city={city.id}>Delete</Button>
                     </td>
                 </tr>
             ))}
