@@ -4,7 +4,7 @@ import { Table, Button } from 'react-bootstrap';
 
 import styles from './cities-table.module.scss';
 
-export const CitiesTable = ({ cities, onDetailsClick }) => (
+export const CitiesTable = ({ cities, onDetailsClick, onDeleteClick }) => (
     <Table striped bordered hover>
         <thead>
             <tr>
@@ -22,7 +22,7 @@ export const CitiesTable = ({ cities, onDetailsClick }) => (
                     <td>{city.country}</td>
                     <td className={styles.actions}>
                         <Button variant="primary" size="sm" onClick={onDetailsClick} city={city.id}>Details</Button>
-                        <Button variant="danger" size="sm">Delete</Button>
+                        <Button variant="danger" size="sm" onClick={onDeleteClick}>Delete</Button>
                     </td>
                 </tr>
             ))}
