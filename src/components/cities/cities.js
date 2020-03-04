@@ -7,10 +7,14 @@ import styles from './cities.module.scss';
 export const Cities = () => {
 
     const [cities, setCities] = useState([]);
+    const [dataLoaded, setDataLoaded] = useState(false);
 
     useEffect(() => {
         import('../../data/cities.json').then(data => {
-            setTimeout(() => setCities(data.default), 2000);
+            setTimeout(() => {
+                setCities(data.default);
+                setDataLoaded(true);
+            }, 2000);
         });
     }, [])
 
@@ -29,7 +33,8 @@ export const Cities = () => {
         <div className={styles.cities_container}>
             {cities.length ?
                 <CitiesTable cities={cities} onDetailsClick={onDetailsClick} onDeleteClick={onDeleteClick} /> :
-                <LoadingSpinner />}
+                (dataLoaded ? <p>Sorry, no data found.</p> : <LoadingSpinner />)
+            }
         </div>
     )
 }
