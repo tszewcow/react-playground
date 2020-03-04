@@ -4,7 +4,7 @@ import { CitiesTable } from '../cities-table/cities-table';
 import { LoadingSpinner } from '../loading-spinner/loading-spinner';
 import styles from './cities.module.scss';
 
-export const Cities = () => {
+export const Cities = props => {
 
     const [cities, setCities] = useState([]);
     const [dataLoaded, setDataLoaded] = useState(false);
@@ -20,7 +20,7 @@ export const Cities = () => {
 
     const onDetailsClick = (event) => {
         const cityId = event.target.getAttribute('city');
-        console.log(cities.find(city => city.id === cityId));
+        props.history.push(`/cities/${cityId}`);
     }
 
     const onDeleteClick = (event) => {

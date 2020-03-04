@@ -6,7 +6,8 @@ import { Home } from './components/home/home';
 import { About } from './components/about/about';
 import { Footer } from './components/footer/footer';
 import { PageNotFound } from './components/page-not-found/page-not-found';
-import {Cities} from './components/cities/cities';
+import { Cities } from './components/cities/cities';
+import { CityDetails } from './components/city-details/city-details';
 
 const App = () => {
 
@@ -23,18 +24,11 @@ const App = () => {
             <Route exact path="/">
               <Redirect to="/home" />
             </Route>
-            <Route path="/home">
-              <Home />
-            </Route>
-            <Route path="/about">
-              <About />
-            </Route>
-            <Route path="/cities">
-              <Cities />
-            </Route>
-            <Route>
-              <PageNotFound />
-            </Route>
+            <Route exact path="/home" component={Home} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/cities" component={Cities} />
+            <Route exact path="/cities/:id" component={CityDetails} />
+            <Route component={PageNotFound} />
           </Switch>
         </div>
       </Router>
