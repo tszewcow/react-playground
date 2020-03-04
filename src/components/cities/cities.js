@@ -29,10 +29,12 @@ export const Cities = () => {
         setCities(cities.slice(0, index).concat(cities.slice(index + 1)));
     }
 
+    const citiesProps = {cities, onDetailsClick, onDeleteClick};
+
     return (
         <div className={styles.cities_container}>
             {cities.length ?
-                <CitiesTable cities={cities} onDetailsClick={onDetailsClick} onDeleteClick={onDeleteClick} /> :
+                <CitiesTable {...citiesProps} /> :
                 (dataLoaded ? <p>Sorry, no data found.</p> : <LoadingSpinner />)
             }
         </div>

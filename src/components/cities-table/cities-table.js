@@ -11,6 +11,7 @@ export const CitiesTable = ({ cities, onDetailsClick, onDeleteClick }) => (
                 <th>#</th>
                 <th>Name</th>
                 <th>Country</th>
+                <th>Overall Rating</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -20,6 +21,7 @@ export const CitiesTable = ({ cities, onDetailsClick, onDeleteClick }) => (
                     <td>{index + 1}</td>
                     <td>{city.name}</td>
                     <td>{city.country}</td>
+                    <td>{city.ratings.overall}</td>
                     <td className={styles.actions}>
                         <Button variant="primary" size="sm" onClick={onDetailsClick} city={city.id}>Details</Button>
                         <Button variant="danger" size="sm" onClick={onDeleteClick} city={city.id}>Delete</Button>

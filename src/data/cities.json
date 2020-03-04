@@ -2,26 +2,41 @@
     {
         "id": "1",
         "name": "Warsaw",
-        "country": "Poland"
+        "country": "Poland",
+        "ratings": {
+            "overall": 3.24
+        }
     },
     {
         "id": "2",
         "name": "Wrocław",
-        "country": "Poland"
+        "country": "Poland",
+        "ratings": {
+            "overall": 3.05
+        }
     },
     {
         "id": "3",
         "name": "Sydney",
-        "country": "Australia"
+        "country": "Australia",
+        "ratings": {
+            "overall": 4.77
+        }
     },
     {
         "id": "4",
         "name": "New York",
-        "country": "Unites States"
+        "country": "Unites States",
+        "ratings": {
+            "overall": 4.45
+        }
     },
     {
         "id": "5",
         "name": "Los Angeles",
-        "country": "United States"
+        "country": "United States",
+        "ratings": {
+            "overall": 4.60
+        }
     }
 ]
