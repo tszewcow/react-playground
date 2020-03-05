@@ -21,7 +21,14 @@ export const CityDetails = props => {
 
     return (
         <div>
-            {dataLoaded ? <><Button as={Link} variant="primary" to='/cities'>Go back</Button><h2>{city.name}</h2></> : <LoadingSpinner />}
+            {dataLoaded ? <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <div>
+                    <h4>{city.name}</h4>
+                    <p><label>Country: <span>{city.country}</span></label></p>
+                    <p><label>Overall Rating: <span>{city.ratings.overall}</span></label></p>
+                </div>
+                <Button as={Link} variant="primary" to='/cities' style={{maxHeight: '40px'}}>Go back</Button>
+            </div> : <LoadingSpinner />}
         </div>
     )
 }
